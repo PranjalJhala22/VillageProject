@@ -31,17 +31,6 @@ __pycache__/
 # Models should be trained on-the-fly or distributed separately.
 /models/
 
-# Ignore the data preparation folders. The final output from these folders
-# is manually copied to `input_datasets/`, so the intermediate process
-# folders do not need to be tracked in the repository.
-/train_dataset_cleanup/
-/test_dataset_cleanup/
-
-# Ignore large binary files like presentations and documents.
-# These are better suited for cloud storage (e.g., Google Drive, SharePoint).
-*.pptx
-*.docx
-*.pdf
 
 # ============================================================================
 # Exception Rules (if needed)
