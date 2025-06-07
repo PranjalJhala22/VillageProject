@@ -1,0 +1,11 @@
+streamlit>=1.20.0
+pandas>=1.5.0
+numpy>=1.20.0
+openpyxl>=3.0.0
+scipy>=1.9.0
+implicit>=0.6.0
+mlxtend>=0.21.0
+altair>=5.0.0
+ipykernel
+nbformat
+tqdm
