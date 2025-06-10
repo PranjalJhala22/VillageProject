@@ -2,6 +2,40 @@
 
 This project forecasts hourly Food & Beverage (F&B) revenue and item-class sales for Village Cinemas. It delivers interactive dashboards, predictive analytics, and stocking recommendations using machine learning models built in Python.
 
+## 📦 Project Deliverables Summary
+
+- ✅ Hourly F&B revenue forecasting model
+- ✅ Item-class level sales forecasting model
+- ✅ Streamlit dashboard for visualization and prediction
+- ✅ Stocking recommendation engine dashboard
+- ✅ Final performance evaluation and validation reports
+
+
+## ⚙️ Setup Instructions
+
+1. Clone the repository
+2. Navigate to the project directory
+3. Create and activate a virtual environment (optional but recommended)
+4. Install required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+5. Ensure the following files are present in their respective folders:
+   - Trained models: `*.pkl` files in `Prediction Script/` and `Validation scripts/`
+   - Data files: `Inventory Transaction Data`, `Movie_sessions.xlsx`, `Vista_Item_Percentage_Breakdown.xlsx`
+
+6. To launch the dashboard:
+    ```bash
+    cd "Prediction Script/"
+    streamlit run Dashboard.py
+    ```
+
+## 🔐 Access and Credentials
+
+No external credentials or licenses are required to run this project. All data files and model artifacts are included locally.
+
+> 🔒 If hosted online or integrated with secure APIs, include authentication keys here or in a secure handover file.
+
 ---
 
 ## 📁 Repository Structure
@@ -115,14 +149,19 @@ This step is for evaluating model performance by comparing forecasts with actual
 
 ---
 
-## 📦 Installation
+## 🐞 Known Issues
 
-### Requirements
+- Stocking recommendations may underpredict when movie admits data is incomplete or estimated or for a unusual high audience.
+- product level breakdown of Item-class sales forecast model is sensitive to previous 2 years product sales mappings in `Vista_Item_Percentage_Breakdown.xlsx` as this part is reverse engineered.
+- No external validation yet with real-time 2024 transactional data.
 
-Install dependencies using:
-```bash
-pip install -r requirements.txt
-```
+
+## 🔧 Support and Maintenance Suggestions
+
+- Retrain models monthly or quarterly as new sales and session data becomes available.
+- Extend dashboard to include anomaly detection (e.g., sudden revenue drops).
+- Integrate real-time API to ingest daily session schedules dynamically.
+- Consider model versioning using MLFlow for production deployments.
 
 ---
 
